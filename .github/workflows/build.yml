@@ -21,5 +21,8 @@ jobs:
       - name: Compile Hello World
         run: gcc -o hello hello.c
 
-      - name: Run Hello World
-        run: ./hello
+      - name: Upload executable
+        uses: actions/upload-artifact@v3
+        with:
+          name: hello-executable
+          path: hello
